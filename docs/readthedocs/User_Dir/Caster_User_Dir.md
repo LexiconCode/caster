@@ -16,11 +16,11 @@ Users can set the location of their Caster user directory using the environment 
 **Layout  Description**
 
  - `data` - Caster stores the files that are not intended to be edited by the user in the `data` directory. Most files here are for self-modifying rules, such as [Alias](../Caster_Commands/Alias.md), and start with `sm_`.
- - `hooks` - For user-made [hooks](../Caster_Settings/hooks.md) (Empty by default).
- - `rules` - For user-made [rules](../Caster_Settings/rules.md) and overrides of rules from Caster (Empty by default).
- - `settings` - All Caster [settings](../Caster_Settings/settings.md) files.
- - `sikuli` - For user-made [Sikuli](../Third-party_Integrations/Sikuli.md) scripts (Empty by default).
- - `transformers` - For [simplified transformers](../Customize_Caster/Customizing_Starter_Rules.md/#use-simplified-transformers) i.e words.txt (Empty by default).
+2. [hooks](https://caster.readthedocs.io/en/latest/readthedocs/Caster_Settings/hooks/)  - User-made hooks are placed (Empty by default)
+3. [rules](https://caster.readthedocs.io/en/latest/readthedocs/Caster_Settings/rules/) -  User-made rules and "Caster starter rules" overrides (Empty by default)
+4. [settings](https://caster.readthedocs.io/en/latest/readthedocs/Caster_Settings/settings/)  - All Caster related settings file
+5. [sikuli](https://caster.readthedocs.io/en/latest/readthedocs/Third-party_Integrations/Sikuli/)  - User-made sikuli scripts (Empty by default)
+6. [transformers](https://caster.readthedocs.io/en/latest/readthedocs/Customize_Caster/Customizing_Starter_Rules/) - Used for simplified transformers i.e words.txt (Empty by default)
 
 ### Backup Procedures
 
