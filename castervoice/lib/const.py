@@ -29,11 +29,11 @@ CORE = [
 if sys.platform == "win32":
     CORE.extend([
          "LegionGridRule",
-         "IERule"
+         #"IERule"
     ])
     # get_engine() is used here as a workaround for running Natlink inprocess
-    if dragonfly.get_engine().name == 'natlink':
-        CORE.append("DragonRule")
+    #if dragonfly.get_engine().name == 'natlink':
+    #    CORE.append("DragonRule")
 
 # internal rules
 INTERNAL = [
@@ -44,12 +44,6 @@ INTERNAL = [
 # default companion rules
 COMPANION_STARTER = {
     "Navigation": ["NavigationNon"],
-    "Java": ["JavaNon"],
-    "Matlab": ["MatlabNon"],
-    "Prolog": ["PrologNon"],
     "Python": ["PythonNon"],
-    "Rust": ["RustNon"],
-    "VHDL": ["VHDLnon"],
-    "EclipseCCR": ["EclipseRule"],
     "VSCodeCcrRule": ["VSCodeNonCcrRule"]
 }
