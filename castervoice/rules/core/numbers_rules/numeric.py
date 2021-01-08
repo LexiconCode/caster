@@ -1,9 +1,9 @@
-from dragonfly import Choice, Function
+from dragonfly import Choice, Function, Dictation
 
 try:  # Try first loading from caster user directory
-    from numeric_support import word_number, numbers2
+    from numeric_support import word_numbern, words_to_num
 except ImportError: 
-    from castervoice.rules.core.numbers_rules.numeric_support import word_number, numbers2
+    from castervoice.rules.core.numbers_rules.numeric_support import word_number, words_to_num
     
 from castervoice.lib.actions import Text
 from castervoice.lib.const import CCRType
@@ -18,14 +18,14 @@ class Numbers(MergeRule):
     mapping = {
         "word number <wn>":
             R(Function(word_number, extra="wn")),
-        "[<long>] numb <wnKK>":
-            R(Text("%(long)s") + Function(numbers2, extra="wnKK") + Text("%(long)s"),
+        "[<long>] numb <numdict>":
+            R(Text("%(long)s") + Function(words_to_num, extra="%(numdict)s") + Text("%(long)s"),
               rspec="Number"),
     }
 
     extras = [
         IntegerRefST("wn", 0, 10),
-        IntegerRefST("wnKK", 0, 1000000),
+        Dictation("numdict"),
         Choice(
             "long", {
                 "long": " ",
